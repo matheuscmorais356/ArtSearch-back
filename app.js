@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Solve CORS
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: process.env.FRONT_URL }));
 
 // Routes
 const router = require("./routes/Router");
