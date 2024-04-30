@@ -10,13 +10,14 @@ const app = express();
 app.use(express.json());
    
 // Solve CORS
-app.use(cors({ 
-  credentials: true, 
-  origin: process.env.FRONT_URL
-}));
+app.use(cors());
 
 // Routes
 const router = require("./routes/Router");
+
+app.get("/", (req, res) => {
+  return res.send("rodando...")
+})
 
 app.use(router);
 
