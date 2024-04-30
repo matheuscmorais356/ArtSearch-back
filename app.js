@@ -12,7 +12,7 @@ app.use(express.json());
 // Solve CORS
 app.use(cors({ 
   credentials: true, 
-  origin: [process.env.FRONT_URL, "http://localhost:3000"],
+  origin: process.env.FRONT_URL,
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
