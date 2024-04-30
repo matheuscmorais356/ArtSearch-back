@@ -10,7 +10,9 @@ const app = express();
 app.use(express.json());
    
 // Solve CORS
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONT_URL
+}));
 
 // Routes
 const router = require("./routes/Router");

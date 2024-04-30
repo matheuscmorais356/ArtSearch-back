@@ -4,10 +4,6 @@ const router = express();
 
 const { searchArtist, genarateRandomArtist, albumTracks } = require("../controllers/ArtistController");
 
-router.get("/", (req, res) => {
-  res.send("Rodando...")
-});
-
 router.get("/api/v1/ping", (req, res) => {
   res.send("pong")
 });
