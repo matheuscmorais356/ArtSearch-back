@@ -12,8 +12,7 @@ app.use(express.json());
 // Solve CORS
 app.use(cors({ 
   credentials: true, 
-  origin: process.env.FRONT_URL,
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: "*",
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
