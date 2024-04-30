@@ -10,11 +10,7 @@ const app = express();
 app.use(express.json());
    
 // Solve CORS
-app.use(cors({ 
-  credentials: true, 
-  origin: process.env.FRONT_URL,
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors({origin: process.env.FRONT_URL}));
 
 // Routes
 const router = require("./routes/Router");
