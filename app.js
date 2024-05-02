@@ -26,3 +26,5 @@ app.use(router);
 app.listen(port, () => {
   console.log(`App rodando na porta ${port}`);
 });
+
+module.exports = app;
