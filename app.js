@@ -18,8 +18,8 @@ app.use(cors({
 const router = require("./routes/Router");
 
 app.get("/", (req, res) => {
-  return res.send("rodando...")
-})
+ res.send("rodando...")
+});
 
 app.use(router);
 
